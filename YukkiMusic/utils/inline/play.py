@@ -41,8 +41,12 @@ def get_progress_bar(percentage):
         return "▱▱▱▱▱▱▱▱▱"
 
 
+
 def stream_markup_timer(_, videoid, chat_id, played, dur):
-    bar = random.choice(selections)
+    played_sec = time_to_seconds(played)
+    duration_sec = time_to_seconds(dur)
+    percentage = (played_sec / duration_sec) * 100
+   
     buttons = [
         [
             InlineKeyboardButton(
