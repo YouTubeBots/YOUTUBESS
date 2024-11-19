@@ -71,8 +71,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
                 url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
             )
         ]
-    )
-    
+    )   
     else:
 
         if GITHUB_REPO:
