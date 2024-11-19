@@ -85,6 +85,6 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
                     InlineKeyboardButton(text=_["S_B_7"], user_id=OWNER),
                     InlineKeyboardButton(text="⛦ ᴄʜᴀᴛ ❥", url=f"https://t.me/BRANDED_WORLD"
                 ),
-            )
+            ]
     buttons.append([InlineKeyboardButton(text=_["ST_B_6"], callback_data="LG")])
     return buttons
