@@ -106,9 +106,6 @@ GIT_TOKEN = getenv(
 # Only  Links formats are  accepted for this Var value.
 SUPPORT_CHANNEL = getenv(
     "SUPPORT_CHANNEL", "https://t.me/Youtube_Offical_Network"
-)  # Example:- https://t.me/TheTeamVivek
-SUPPORT_GROUP = getenv(
-    "SUPPORT_GROUP", "https://t.me/Youtube_Offical_Support"
 )  # Example:- https://t.me/TheTeamVk
 
 
@@ -133,7 +130,7 @@ TELEGRAM_DOWNLOAD_EDIT_SLEEP = int(getenv("TELEGRAM_EDIT_SLEEP", "5"))
 
 
 # Your Github Repo.. Will be shown on /start Command
-GITHUB_REPO = getenv("GITHUB_REPO", "https://t.me/Youtube_Offical_Support")
+GITHUB_REPO = getenv("SUPPORT_GROUP", "https://t.me/Youtube_Offical_Support")
 
 
 # Spotify Client.. Get it from https://developer.spotify.com/dashboard
