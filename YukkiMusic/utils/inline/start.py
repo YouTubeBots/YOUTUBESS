@@ -71,13 +71,20 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
                 url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
             )
         ]
-    )   
+    )
+    if GITHUB_REPO and OWNER:
+        buttons.append(
+            [
+                InlineKeyboardButton(text=_["S_B_7"], user_id=OWNER),
+                InlineKeyboardButton(text=_["S_B_6"], url=f"{GITHUB_REPO}"),
+            ]
+        )
     else:
 
         if GITHUB_REPO:
             buttons.append(
                 [
-                    InlineKeyboardButton(text="group", url=f"https://t.me/moonlight_Robo"),
+                    InlineKeyboardButton(text=_["S_B_6"], url=f"{GITHUB_REPO}"),
                 ]
             )
 
@@ -85,8 +92,10 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
             buttons.append(
                 [
                     InlineKeyboardButton(text=_["S_B_7"], user_id=OWNER),
-                    InlineKeyboardButton(text="group", url=f"https://t.me/moonlight_Robo"),
                 ]
             )
+           buttons.append(
+                   [InlineKeyboardButton(text="Group", url="https://t.me/moonlight_Robo")]
+    )
     buttons.append([InlineKeyboardButton(text=_["ST_B_6"], callback_data="LG")])
     return buttons
