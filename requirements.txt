@@ -9,7 +9,7 @@ lyricsgenius
 motor
 psutil
 pytube
-py-tgcalls
+py-tgcalls==1.2.9
 python-dotenv
 pyyaml
 requests
